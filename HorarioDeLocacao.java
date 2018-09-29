@@ -8,6 +8,24 @@ public class HorarioDeLocacao {
 	private LocalDate dataQueAlugou;
 	private LocalTime horarioQueDevolveu;
 	private LocalDate dataQueDevolveu;
+	private Agencia agenciaQueAlugou;
+	private Agencia agenciaQueDevolveu;
+	
+	public void setAgenciaQueAlugou(Agencia agenciaQueAlugou) {
+		this.agenciaQueAlugou = agenciaQueAlugou;
+	}
+	
+	public void setAgenciaQueDevolveu(Agencia agenciaQueDevolveu) {
+		this.agenciaQueDevolveu = agenciaQueDevolveu;
+	}
+	
+	public Agencia getAgenciaQueAlugou() {
+		return agenciaQueAlugou;
+	}
+	
+	public Agencia getAgenciaQueDevolveu() {
+		return agenciaQueDevolveu;
+	}
 	
 	public void setDataQueAlugou() {
 		LocalDate dataQueAlugou = LocalDate.now();
@@ -51,12 +69,13 @@ public class HorarioDeLocacao {
 
 		DateTimeFormatter formatData = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // formato ele pra dia/mes/ano
 
-		System.out.println(horario.format(formatData));
+		System.out.println(horario.format(formatHour));
 
-		System.out.println(data.format(formatHour));
+		System.out.println(data.format(formatData));
 
 		
 	}
+	
 	
 
 }

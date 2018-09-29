@@ -98,7 +98,7 @@ public abstract class Automovel {
 	}
 
 	public void setValorDeLocacao(double valorDeLocacao) {
-		this.valorDeLocacao = valorDeLocacao;
+		this.valorDeLocacao = valorDeLocacao + getAno()*0.8;
 	}
 
 }
