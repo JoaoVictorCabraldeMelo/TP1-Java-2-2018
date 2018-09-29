@@ -51,12 +51,13 @@ public class HorarioDeLocacao {
 
 		DateTimeFormatter formatData = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // formato ele pra dia/mes/ano
 
-		System.out.println(horario.format(formatData));
+		System.out.println(horario.format(formatHour));
 
-		System.out.println(data.format(formatHour));
+		System.out.println(data.format(formatData));
 
 		
 	}
+	
 	
 
 }
