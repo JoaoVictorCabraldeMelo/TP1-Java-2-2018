@@ -75,6 +75,7 @@ public class ControleDeLocacao {
 		} else {
 			if (horarioDeLocacao != null) {
 
+
 				if (tipoDeLocacao == 1) {
 
 					int i = getMapAutomovelHorariosDeLocacao().get(automovel).indexOf(horarioDeLocacao);

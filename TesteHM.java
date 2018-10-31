@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 
 
 public class TesteHM {
@@ -20,6 +23,7 @@ public class TesteHM {
 		empresa.addAutomoveis(carro2);
 		empresa.addAutomoveis(carro3);
 		empresa.addAutomoveis(carro4);
+
 		
 		Agencia agencia1 = new Agencia("Azure", "São Paulo", 11);
 		
@@ -29,9 +33,11 @@ public class TesteHM {
 		
 		Agencia agencia4 = new Agencia("Azure", "Porto Alegere", 8);
 
+
 		Cliente cliente = new Cliente("Seu Medina", "000-222-65");
 
 		ControleDeLocacao controleDeLocacao = new ControleDeLocacao();
+
 
 		HorarioDeLocacao retornoAluga1, retornoAluga2;
 
@@ -60,7 +66,6 @@ public class TesteHM {
 		retornoAluga1 = controleDeLocacao.aluga(cliente3, carro4, agencia3);
 		
 		controleDeLocacao.devolve(cliente3, carro4, retornoAluga1, agencia2, 2);
-
 
 	}
 
