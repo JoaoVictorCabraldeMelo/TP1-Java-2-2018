@@ -67,11 +67,11 @@ public class ControleDeLocacao {
 	public void devolve(Cliente cliente, Automovel automovel, HorarioDeLocacao horarioDeLocacao, Agencia agencia,
 			int tipoDeLocacao) {
 		if (carrosDisponiveis.contains(automovel)) {
-			System.out.println("O automovel que o senhor esta tentando devolver ja esta disponivel");
+			throw new AlreadyAvaliable("Este automovel ja está disponível");
 		} else if (!(getMapClienteAutomovel().containsKey(cliente))) {
-			System.out.println("O senhor não alugou nada ou automovel não esta disponivel");
+			throw new NothingOrNotAvailable("O senhor não alugou nada ou automovel não esta disponivel");
 		} else if (!getMapClienteAutomovel().get(cliente).contains(automovel)) {
-			System.out.println("O senhor não alugou esse automovel");
+			throw new NotRented("O senhor não alugou esse carro");
 		} else {
 			if (horarioDeLocacao != null) {
 
