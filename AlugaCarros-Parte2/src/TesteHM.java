@@ -4,6 +4,8 @@
 public class TesteHM {
 
 	public static void main(String[] args) {
+		
+		try {
 
 		Empresa empresa = new Empresa("Azure");
 
@@ -53,17 +55,24 @@ public class TesteHM {
 
 		retornoAluga2 = controleDeLocacao.aluga(cliente2, carro4, agencia3);
 
-		controleDeLocacao.devolve(cliente2, carro2, null, null, 2);
+/*		controleDeLocacao.devolve(cliente2, carro2, null, null, 2); descomente essa linha do codigo para testar uma exceçao*/
 		
 		controleDeLocacao.devolve(cliente2, carro4, retornoAluga2, agencia1, 2);
 
 		Cliente cliente3 = new Cliente("Dona Chica", "555-444");
 
-		controleDeLocacao.devolve(cliente3, carro4, null, null, 0);
+/*		controleDeLocacao.devolve(cliente3, carro4, null, null, 0); outro teste de exceção */
 
 		retornoAluga1 = controleDeLocacao.aluga(cliente3, carro4, agencia3);
 		
 		controleDeLocacao.devolve(cliente3, carro4, retornoAluga1, agencia2, 2);
+		
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		finally {
+			System.out.println("Finalizando Metodo Main de Testes");
+		}
 
 	}
 
